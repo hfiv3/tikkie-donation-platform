@@ -37,6 +37,11 @@ Kies een bedrag, vul optioneel je naam en bericht in, en betaal via Tikkie.
 
 ![Donatieformulier](docs/screenshots/donate-form.png)
 
+### TV-modus
+Fullscreen display met live voortgang, QR-code en automatisch roterende slides. Zet op een scherm in je clubhuis of kantoor.
+
+![TV-modus](docs/screenshots/tv-mode.png)
+
 ## Quick start (lokale ontwikkeling)
 
 ```bash
@@ -77,21 +82,39 @@ docker run -d \
 
 ## Tikkie API instellen
 
-Om echte betalingen te ontvangen heb je een Tikkie Zakelijk account nodig via ABN AMRO:
+> **Let op:** Dit platform gebruikt **Tikkie Zakelijk**, niet de particuliere Tikkie-app. Je hebt een zakelijk account nodig (als vereniging, stichting of bedrijf).
 
-1. Ga naar [developer.abnamro.com](https://developer.abnamro.com/)
-2. Maak een account aan en registreer een app
-3. Vraag toegang aan tot de Tikkie API
-4. Je ontvangt een **API Key** en **App Token**
-5. Configureer in `.env`:
-   ```
-   TIKKIE_MODE=production
-   TIKKIE_API_KEY=jouw-api-key
-   TIKKIE_APP_TOKEN=jouw-app-token
-   TIKKIE_SANDBOX=false
-   ```
+### Stap 1: Tikkie Zakelijk account
 
-**Sandbox testen:** Zet `TIKKIE_SANDBOX=true` om eerst te testen met de sandbox API.
+1. Ga naar [tikkie.me/zakelijk](https://www.tikkie.me/zakelijk) en meld je aan
+2. Je hebt een **zakelijke ABN AMRO rekening** nodig (of KvK-inschrijving als vereniging/stichting)
+3. Na goedkeuring heb je toegang tot het Tikkie Business portaal
+
+### Stap 2: ABN AMRO Developer account + Production API key
+
+1. Ga naar [developer.abnamro.com](https://developer.abnamro.com/) en maak een account aan
+2. Registreer een nieuwe app en vraag toegang aan tot de **Tikkie API**
+3. Test eerst met de **sandbox** API key (die krijg je direct)
+4. Vraag een **production API key** aan — dit is een apart proces waarbij ABN AMRO je aanvraag beoordeelt. Duurt meestal een paar werkdagen.
+5. Na goedkeuring ontvang je een **API Key** en **App Token**
+
+### Stap 3: Configureren
+
+```env
+# Sandbox (testen)
+TIKKIE_MODE=production
+TIKKIE_API_KEY=jouw-sandbox-api-key
+TIKKIE_APP_TOKEN=jouw-app-token
+TIKKIE_SANDBOX=true
+
+# Productie (echte betalingen)
+TIKKIE_MODE=production
+TIKKIE_API_KEY=jouw-production-api-key
+TIKKIE_APP_TOKEN=jouw-app-token
+TIKKIE_SANDBOX=false
+```
+
+**Tip:** Begin altijd met `TIKKIE_SANDBOX=true` om te testen. Schakel pas over naar `false` als alles werkt.
 
 ## Slack notificaties instellen
 
