@@ -1,32 +1,47 @@
 # tikkie-donation-platform
 
-Open-source donatieplatform met Tikkie betalingen. Gebouwd met Next.js, Express en SQLite.
+**Open-source donatie- en crowdfundingplatform met Tikkie betalingen. 0% platformkosten.**
 
-Ideaal voor verenigingen, stichtingen en clubs die een crowdfunding of donatieactie willen opzetten met iDEAL-betalingen via Tikkie.
+Gebouwd met Next.js, Express en SQLite. Ideaal voor sportclubs, verenigingen, stichtingen, scholen, buurthuizen — iedereen die geld wil ophalen zonder dat er een percentage van de donaties naar een platform gaat.
+
+> Bij veel crowdfundingplatforms verdampt er stilletjes 5-10% van elke donatie aan platformkosten. Dit platform koppelt direct aan Tikkie — 100% van elke euro gaat naar je doel.
 
 ## Features
 
-- **Tikkie betalingen** — Donaties worden afgehandeld via Tikkie (ABN AMRO). Stub-modus voor ontwikkeling, productie-modus met echte betalingen.
-- **Realtime voortgang** — Live voortgangsbalk met doelbedrag en deadline countdown.
+- **Tikkie betalingen** — Donaties via Tikkie (ABN AMRO) met iDEAL. Iedereen kent het, iedereen vertrouwt het. Stub-modus voor ontwikkeling, productie-modus met echte betalingen.
+- **0% commissie** — Geen platformkosten. Je draait het zelf, je houdt alles.
+- **Realtime voortgang** — Live voortgangsbalk met doelbedrag en deadline countdown die motiveert.
 - **Donatiemuur** — Recente donaties worden automatisch getoond.
 - **Activity ticker** — Live notificaties van nieuwe donaties in de hoek van het scherm.
-- **TV-modus** — Fullscreen display met automatisch roterende slides: voortgang, donaties, brief en QR-code. Perfect voor op een scherm in je clubhuis of kantoor.
+- **TV-modus** — Fullscreen display met automatisch roterende slides, QR-code en live stats. Perfect voor op een scherm in je clubhuis, school of kantoor.
 - **Admin panel** — Beveiligd dashboard voor het beheren van donaties en campagne-instellingen.
-- **Slack notificaties** — Ontvang alerts bij nieuwe donaties, dagelijkse samenvattingen en server health monitoring.
+- **Slack notificaties** — Realtime alerts bij donaties, dagelijkse samenvattingen en server health monitoring.
 - **Zakelijke facturen** — Donateurs kunnen optioneel bedrijfsgegevens invullen voor een factuur.
 - **Responsive design** — Werkt op desktop, tablet en mobiel.
 - **WhatsApp delen** — Eenvoudig de actie delen via WhatsApp.
 - **Docker ready** — Eenvoudige deployment met Docker en docker-compose.
 
+## Mogelijke uitbreidingen
+
+Dit platform is bewust simpel gehouden: een donatieactie met Tikkie. Maar je kunt het uitbreiden met:
+
+- **Wishlist / items claimen** — Laat mensen specifieke spullen sponsoren (bijv. "Nieuwe stoelen €200"). Zie [trytogether.nl](https://trytogether.nl) voor een live voorbeeld.
+- **Meerdere campagnes** — Verschillende doelen naast elkaar.
+- **Email notificaties** — Bedankmails naar donateurs.
+- **Betalingsbewijzen / PDF export**
+
 ## Screenshots
 
-<!-- TODO: Voeg screenshots toe van je donatieplatform -->
+### Donatieformulier
+Kies een bedrag, vul optioneel je naam en bericht in, en betaal via Tikkie.
+
+![Donatieformulier](docs/screenshots/donate-form.png)
 
 ## Quick start (lokale ontwikkeling)
 
 ```bash
 # Clone de repository
-git clone https://github.com/jouw-gebruiker/tikkie-donation-platform.git
+git clone https://github.com/hfiv3/tikkie-donation-platform.git
 cd tikkie-donation-platform
 
 # Installeer dependencies
