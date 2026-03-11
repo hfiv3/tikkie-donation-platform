@@ -37,6 +37,11 @@ Kies een bedrag, vul optioneel je naam en bericht in, en betaal via Tikkie.
 
 ![Donatieformulier](docs/screenshots/donate-form.png)
 
+### Live activiteit
+Donaties en claims verschijnen realtime. De ticker linksonder toont de laatste activiteit.
+
+![Activiteitenmuur](docs/screenshots/activity-wall.png)
+
 ### TV-modus
 Fullscreen display met live voortgang, QR-code en automatisch roterende slides. Zet op een scherm in je clubhuis of kantoor.
 
