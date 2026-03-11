@@ -32,6 +32,11 @@ Dit platform is bewust simpel gehouden: een donatieactie met Tikkie. Maar je kun
 
 ## Screenshots
 
+### Hero met live voortgang
+Fullscreen hero met live donatiemeter, countdown en CTA.
+
+![Hero met voortgang](docs/screenshots/hero-progress.png)
+
 ### Donatieformulier
 Kies een bedrag, vul optioneel je naam en bericht in, en betaal via Tikkie.
 
